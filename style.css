@@ -51,7 +51,6 @@ body::before {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     z-index: 3;
     position: relative;
-    flex-wrap: wrap;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -82,23 +81,6 @@ h2 {
     margin: 20px auto;
     display: block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-p {
-    font-size: 1.2em;
-    color: #ccc;
-    margin-top: 30px;
-    line-height: 1.8;
-    font-weight: 400;
-}
-
-.content p:last-of-type {
-    font-size: 1.1em;
-    color: #bbb;
-    line-height: 1.6;
-    text-align: left;
-    max-width: 800px;
-    margin: 20px auto;
 }
 
 html {
@@ -152,15 +134,26 @@ p { animation-delay: 0.3s; }
     100% { transform: translateY(-100px); opacity: 0; }
 }
 
+.about {
+    color: #aaa; ;
+    padding: 1px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
 /* Styling Section Utama */
 .resume-section {
     color: #fff; /* Warna teks putih */
-    padding: 40px;
+    padding: 1px;
     text-align: center;
 }
 
 .resume-section h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -174,19 +167,19 @@ p { animation-delay: 0.3s; }
 /* Styling Content untuk 2 Kotak */
 .resume-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 20px; /* Jarak antar kotak */
     flex-wrap: wrap; /* Supaya kotak turun ke bawah jika ruang tidak cukup */
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 /* Styling Kotak Individual */
 .resume-block {
     background-color: rgba(255, 255, 255, 0.2); /* Warna abu-abu gelap untuk kotak */
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
-    width: 45%; /* Lebar kotak 45% dari container */
+    width: 10%; /* Lebar kotak 45% dari container */
     min-width: 300px; /* Minimal lebar kotak agar tetap proporsional */
 }
 
