@@ -51,6 +51,7 @@ body::before {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     z-index: 3;
     position: relative;
+    flex-wrap: wrap;
     font-family: 'Poppins', sans-serif;
 }
 
