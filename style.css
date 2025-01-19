@@ -137,12 +137,16 @@ p { animation-delay: 0.3s; }
 .about {
     color: #aaa; ;
     padding: 1px;
-    text-align: center;
 }
 
 .about h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p {
+    text-align: left;
 }
 
 /* Styling Section Utama */
