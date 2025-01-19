@@ -54,26 +54,26 @@ body::before {
     font-family: 'Poppins', sans-serif;
 }
 
-h1, h2 {
+.content h1, h3 {
     color: #fff;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-h1 {
-    font-size: 3em;
+.content h1 {
+    font-size: 2em;
     margin: 10px 0;
     font-weight: 600;
 }
 
-h2 {
-    font-size: 2.5em;
+.content h3 {
+    font-size: 2em;
     margin: 10px 0 30px;
     font-weight: 500;
 }
 
-.photo {
+.content .photo {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -99,7 +99,7 @@ html {
     }
 }
 
-.text-container .text, h1, h2, strong, .resume-block, h3,
+.text-container .text, h1, h2, h3, strong, .resume-block,
 .social-icon, .social-iconmail, .photo, .btn-certification, .btn-cv, p {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
@@ -108,6 +108,7 @@ html {
 .text-container .text { animation-delay: 0s; }
 h1 { animation-delay: 0.3s; }
 h2 { animation-delay: 0.3s; }
+h3 { animation-delay: 0.3s; }
 .photo { animation-delay: 0.3s; }
 p { animation-delay: 0.3s; }
 .social-icon, .social-iconmail { animation-delay: 1.9s; }
@@ -135,18 +136,20 @@ p { animation-delay: 0.3s; }
 }
 
 .about {
-    color: #aaa; ;
-    padding: 1px;
+    max-width: 600px; /* Atur lebar maksimal agar tidak terlalu meluas */
+    margin: 0 auto; /* Agar teks tetap berada di tengah halaman */
+    line-height: 1.6; /* Menambahkan jarak antar baris agar lebih rapi */
 }
 
 .about h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     text-align: center;
+    font-weight: bold;
 }
 
 .about p {
-    text-align: left;
+    color:#aaa ;
 }
 
 /* Styling Section Utama */
