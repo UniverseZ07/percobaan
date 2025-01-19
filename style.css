@@ -150,3 +150,57 @@ p { animation-delay: 0.3s; }
     0% { transform: translateY(0); opacity: 1; }
     100% { transform: translateY(-100px); opacity: 0; }
 }
+
+/* Styling Section Utama */
+.resume-section {
+    color: #fff; /* Warna teks putih */
+    padding: 40px;
+    text-align: center;
+}
+
+.resume-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.resume-section p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #aaa;
+}
+
+/* Styling Content untuk 2 Kotak */
+.resume-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Jarak antar kotak */
+    flex-wrap: wrap; /* Supaya kotak turun ke bawah jika ruang tidak cukup */
+    margin-top: 30px;
+}
+
+/* Styling Kotak Individual */
+.resume-block {
+    background-color: rgba(255, 255, 255, 0.2); /* Warna abu-abu gelap untuk kotak */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    width: 45%; /* Lebar kotak 45% dari container */
+    min-width: 300px; /* Minimal lebar kotak agar tetap proporsional */
+}
+
+.resume-block h3 {
+    font-size: 1.5rem;
+    color: #00ff26; /* Warna hijau untuk tanggal */
+    margin-bottom: 10px;
+}
+
+.resume-block p {
+    margin: 10px 0;
+    color: #ddd;
+}
+
+.resume-block strong {
+    font-size: 1.2rem;
+    color: #fff;
+}
