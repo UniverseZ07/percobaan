@@ -1,207 +1,146 @@
-/* Body Styling */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 body {
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1d1e22, #3a3b3e);
-    color: #fff;
-    min-height: 100vh;
+    padding: 0; /* Hilangkan padding bawaan */
+    overflow: hidden; /* Mencegah scroll jika ada kelebihan konten */
+    font-family: 'Acme', sans-serif;
     display: flex;
-    justify-content: center;
+    background-image: url('background-body.jpg'); /* Ganti dengan URL file PNG Anda */
+    background-size: cover; /* Menutupi seluruh area navigasi */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
+    background-position: center; /* Posisi gambar di tengah */
+    margin-bottom: 250px;
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(to right, #a39f9f, #cce1e8);
+    color: #000033; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    position: relative;
-    overflow-x: hidden;
+    padding-top: 100px;
+    box-shadow: 50px 100px 50px rgba(0, 0, 0, 0.1);
 }
 
-body::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px), 
-        linear-gradient(180deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
-    z-index: 1;
-    opacity: 0.2;
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(#555 1px, transparent 1px);
-    background-size: 20px 20px;
-    opacity: 0.3;
-    z-index: 2;
-}
-
-
-/* Main Content */
-.content {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    z-index: 3;
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-}
-
-.content h1, h3 {
-    color: #fff;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-.content h1 {
-    font-size: 2em;
-    margin: 10px 0;
-    font-weight: 600;
-}
-
-.content h3 {
-    font-size: 2em;
-    margin: 10px 0 30px;
-    font-weight: 500;
-}
-
-.content .photo {
+.profile-pic {
+    overflow: hidden;
     width: 200px;
     height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 20px auto;
-    display: block;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.text-container .text, h1, h2, h3, strong, .resume-block,
-.social-icon, .social-iconmail, .photo, .btn-certification, .btn-cv, p {
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-}
-
-.text-container .text { animation-delay: 0s; }
-h1 { animation-delay: 0.3s; }
-h2 { animation-delay: 0.3s; }
-h3 { animation-delay: 0.3s; }
-.photo { animation-delay: 0.3s; }
-p { animation-delay: 0.3s; }
-.social-icon, .social-iconmail { animation-delay: 1.9s; }
-.btn-certification { animation-delay: 1.5s; }
-.btn-cv { animation-delay: 1.7s; }
-
-/* Particles */
-.particle {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    animation: move 8s linear infinite;
-}
-
-.particle:nth-child(1) { left: 5%; top: 10%; animation-delay: 0s; }
-.particle:nth-child(2) { left: 95%; top: 30%; animation-delay: 2s; }
-.particle:nth-child(3) { left: 5%; top: 50%; animation-delay: 4s; }
-.particle:nth-child(4) { left: 95%; top: 70%; animation-delay: 6s; }
-
-@keyframes move {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(-100px); opacity: 0; }
-}
-
-.about {
-    max-width: 600px; /* Atur lebar maksimal agar tidak terlalu meluas */
-    margin: 0 auto; /* Agar teks tetap berada di tengah halaman */
-    line-height: 1.6; /* Menambahkan jarak antar baris agar lebih rapi */
-}
-
-.about h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.about p {
-    color:#aaa ;
-}
-
-/* Styling Section Utama */
-.resume-section {
-    color: #fff; /* Warna teks putih */
-    padding: 1px;
-    text-align: center;
-}
-
-.resume-section h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.resume-section p {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    color: #aaa;
-}
-
-/* Styling Content untuk 2 Kotak */
-.resume-content {
+    border-radius: 80%;
+    border: 10px solid #717273; 
+    margin-bottom: 2px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px; /* Jarak antar kotak */
-    flex-wrap: wrap; /* Supaya kotak turun ke bawah jika ruang tidak cukup */
-    margin-top: 10px;
+    font-size: 24px;
+    color: #888;
+    transition: transform 0.3 ease;
+    box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling Kotak Individual */
-.resume-block {
-    background-color: rgba(255, 255, 255, 0.2); /* Warna abu-abu gelap untuk kotak */
-    padding: 20px;
-    border-radius: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
-    width: 10%; /* Lebar kotak 45% dari container */
-    min-width: 300px; /* Minimal lebar kotak agar tetap proporsional */
+.profile-pic img {
+    margin-left: 5px;
+    margin-top: 37px;
+    scale: 1.2;
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    transition: transform 0.3s ease; 
 }
 
-.resume-block h3 {
-    font-size: 1.5rem;
-    color: #00ff26; /* Warna hijau untuk tanggal */
-    margin-bottom: 10px;
+.profile-pic img:hover {
+    transform: scale(1.9); /* zoom foto/gambar */
 }
 
-.resume-block p {
-    margin: 10px 0;
-    color: #ddd;
+.nav {
+    list-style: none;
+    padding: 0;
+    width: 100%;
 }
 
-.resume-block strong {
-    font-size: 1.2rem;
+.nav-item {
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
     color: #fff;
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+    font-family: 'Acme', sans-serif;
+    text-shadow: 2px 2px 4px black;    
+}
+
+.nav-link:hover {
+    background-color: #444;
+}
+
+.nav-link i {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.nav-link span {
+    font-size: 16px;
+}
+
+/* Top Navigation */
+.top-nav {
+    background-image: url('background-top-nav1.jpg'); /* Ganti dengan URL file PNG Anda */
+    background-size: cover; /* Menutupi seluruh area navigasi */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
+    background-position: center; /* Posisi gambar di tengah */
+    padding: 0px 3px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.Nama {
+    position: relative;
+    top: -35%; /* Teks turun 50% dari atas elemen induk */
+    right: -2%; /* Teks pindah 50% dari kiri elemen induk */
+    text-shadow: 2px 2px 4px black;
+    
+}
+
+.Download_CV {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    top: 35%; /* Teks turun 50% dari atas elemen induk */
+    right: 2%; /* Teks pindah 50% dari kiri elemen induk */
+}
+
+.Download_CV:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.Download_CV:active {
+    background-color: #004080;
+    transform: translateY(0);
+}
+
+.Namaprof {
+    text-shadow: 2px 2px 4px black;
 }
