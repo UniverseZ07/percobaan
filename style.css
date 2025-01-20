@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 body {
     margin: 0;
-    padding: 0; /* Hilangkan padding bawaan */
-    overflow: hidden; /* Mencegah scroll jika ada kelebihan konten */
     font-family: 'Acme', sans-serif;
     display: flex;
     background-image: url('background-body.jpg'); /* Ganti dengan URL file PNG Anda */
